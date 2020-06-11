@@ -1,6 +1,5 @@
 const { Client, Collection } = require('discord.js');
 const { readFile } = require('fs');
-// require('events').EventEmitter.defaultMaxListeners = 15;
 if (!process.env.HEROKU) {
     require('dotenv').config();
 }
