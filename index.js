@@ -1,7 +1,7 @@
 const { Client, Collection } = require('discord.js');
 const { readFile } = require('fs');
 // require('events').EventEmitter.defaultMaxListeners = 15;
-if (!(process.env._ && process.env._.indexOf('heroku'))) {
+if (!process.env.HEROKU) {
     require('dotenv').config();
 }
 
@@ -11,7 +11,6 @@ const client = new Client();
 ['event', 'command'].forEach((handler) => require(`./handlers/${handler}`)(client));
 
 client.prefix = process.env.PREFIX;
-client.guildId = process.env.GUILD_ID;
 
 readFile('quotes.txt', (err, data) => {
     if (err) throw err;
