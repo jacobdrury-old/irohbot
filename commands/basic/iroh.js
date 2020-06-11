@@ -1,6 +1,7 @@
 module.exports = {
-    name: 'iroh',
+    name: 'quote',
     description: 'Sends a random Iroh quote!',
+    aliases: ['q'],
     category: 'basic',
     async execute(message) {
         const quotes = message.client.quotes;

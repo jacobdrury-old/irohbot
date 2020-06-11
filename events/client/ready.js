@@ -1,10 +1,10 @@
 module.exports = (client) => {
-    // client.user.setPresence({
-    //     status: 'online',
-    //     activity: {
-    //         name: 'me getting developed',
-    //         type: 'WATCHING',
-    //     },
-    // });
+    client.user.setPresence({
+        status: 'online',
+        activity: {
+            name: 'Type :help for usage!',
+            type: 'PLAYING',
+        },
+    });
     console.log('Ready!');
 };
