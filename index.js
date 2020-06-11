@@ -1,7 +1,9 @@
 const { Client, Collection } = require('discord.js');
 const { readFile } = require('fs');
 // require('events').EventEmitter.defaultMaxListeners = 15;
-require('dotenv').config();
+if (!(process.env._ && process.env._.indexOf('heroku'))) {
+    require('dotenv').config();
+}
 
 const client = new Client();
 ['commands', 'aliases'].forEach((x) => (client[x] = new Collection()));
