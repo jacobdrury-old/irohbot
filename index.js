@@ -1,8 +1,5 @@
 const { Client, Collection } = require('discord.js');
 const { readFile } = require('fs');
-if (!process.env.HEROKU) {
-    require('dotenv').config();
-}
 
 const client = new Client();
 ['commands', 'aliases'].forEach((x) => (client[x] = new Collection()));
