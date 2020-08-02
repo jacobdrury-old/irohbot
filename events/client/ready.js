@@ -7,5 +7,4 @@ module.exports = (client) => {
         },
     });
     console.log('Ready!');
-    console.log(client.guilds);
 };
