@@ -7,7 +7,5 @@ module.exports = (client) => {
         },
     });
     console.log('Ready!');
-    client.guilds.forEach((guild) => {
-        console.log(guild.name);
-    });
+    console.log(client.guilds);
 };
